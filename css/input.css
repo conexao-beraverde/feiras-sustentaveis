@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "DM Serif Text", Georgia, serif;
+
+  --color-verde-200: #acef75;
+  --color-verde-300: #91ee77;
+  --color-verde-400: #17e880;
+  --color-verde-700: #2e482c;
+  --color-verde-800: #16281f;
+  --color-verde-900: #0f1c15;
+  --color-verde-950: #030504;
+
+  --animate-slide-in: slideIn 0.4s ease-in-out forwards;
+  --animate-fade-in: animation: fadeIn 0.4s ease-in-out forwards;
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer components {
+  .neon {
+    @apply border-verde-200 from-verde-200 to-verde-400 rounded-full border bg-gradient-to-b;
+    box-shadow:
+      0 1px 4px 1px theme(--color-verde-200 / 25%),
+      inset 0 -1px 2px theme(--color-verde-200);
+  }
+
+  .input {
+    @apply border-verde-800 bg-verde-800 focus:ring-verde-400 focus:border-verde-900 placeholder:text-verde-900 rounded-md border-2 p-2 text-white focus:ring-2 focus:outline-none;
+  }
+
+  .btn {
+    @apply border-verde-200 from-verde-200 to-verde-400 text-verde-900 cursor-pointer rounded-full border bg-gradient-to-b px-5 py-2 transition hover:contrast-200;
+    box-shadow:
+      0 1px 4px 1px theme(--color-verde-200 / 25%),
+      inset 0 -1px 2px theme(--color-verde-200);
+  }
+
+  .btn-outline {
+    @apply border-verde-700 text-verde-200 hover:border-verde-400 hover:text-verde-300 cursor-pointer rounded-full border px-5 py-2 text-sm transition;
+  }
+
+  .chip {
+    @apply border-verde-700 text-verde-300 hover:border-verde-400 cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition;
+  }
+
+  .chip.is-active {
+    @apply border-verde-200 from-verde-200 to-verde-400 text-verde-900 bg-gradient-to-b;
+  }
+
+  .card {
+    @apply bg-verde-900 border-verde-800/60 overflow-hidden rounded-xl border;
+  }
+
+  .reveal {
+    @apply translate-y-4 opacity-0 transition-all duration-700 ease-out;
+  }
+
+  .reveal.is-visible {
+    @apply translate-y-0 opacity-100;
+  }
+
+  /* .radial-gradient {
+    background-image: radial-gradient(50% 100% at 50% 0%, theme(--color-verde-700) 0%, theme(--color-verde-800) 100%);
+  } */
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+
+  @variant sm {
+    padding-inline: 1rem;
+  }
+}
+
+@utility animate-1 {
+  animation-delay: 100ms;
+}
+
+@utility animate-2 {
+  animation-delay: 200ms;
+}
+
+@utility animate-3 {
+  animation-delay: 300ms;
+}
+
+@utility animate-4 {
+  animation-delay: 400ms;
+}

@@ -1,0 +1,9 @@
+Cole aqui o arquivo exportado do Google My Maps com o nome exato: feiras.kml
+
+Como exportar:
+1. Abrir o mapa no Google My Maps
+2. Menu (3 pontinhos) > Exportar para KML/KMZ
+3. Selecionar 'Mapa inteiro'
+4. DESMARCAR 'Manter dados atualizados com o KML do link de rede' (senao nao funciona offline)
+5. MARCAR 'Exportar como KML em vez de KMZ'
+6. OK e salvar o arquivo nesta pasta como feiras.kml

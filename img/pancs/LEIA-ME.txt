@@ -1,0 +1,22 @@
+FOTOS DAS PANCs
+===============
+
+Coloque aqui uma foto de cada planta, com EXATAMENTE estes nomes de arquivo
+(tudo minúsculo, sem acento, extensão .jpg):
+
+  ora-pro-nobis.jpg
+  taioba.jpg
+  jambu.jpg
+  caruru.jpg
+  beldroega.jpg
+
+Enquanto o arquivo não existir, o site mostra um fundo verde com uma folhinha
+no lugar da foto (isso é proposital, não é erro).
+
+Dicas:
+- Formato paisagem (mais larga que alta), por volta de 800 x 500 pixels.
+- Use foto REAL da espécie certa — este é um guia de identificação.
+  Boas fontes com licença livre: Wikimedia Commons, iNaturalist (fotos CC),
+  ou fotos suas.
+- Para trocar o nome do arquivo esperado, edite o campo "img" da planta
+  em js/script.js.
