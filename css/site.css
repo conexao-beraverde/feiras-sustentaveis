@@ -94,23 +94,8 @@
   border: 0;
 }
 
-/* Vídeo do Instagram + animação de mudas lado a lado */
-.ig-block {
-  display: grid;
-  gap: 2.5rem;
-  align-items: center;
-  justify-items: center;
-}
-
-@media (min-width: 860px) {
-  .ig-block {
-    grid-template-columns: 380px 1fr;
-    justify-items: start;
-  }
-}
-
+/* Embed do Instagram (vídeo da feira) */
 .ig-embed {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -122,60 +107,6 @@
   border: 1px solid var(--verde-700);
   border-radius: 0.9rem;
   background: #000;
-}
-
-/* --------------------------------------------------
-   Mudas crescendo (SVG feito à mão, no traço do site)
-   -------------------------------------------------- */
-.grow-anim {
-  width: 100%;
-  max-width: 400px;
-  overflow: visible;
-}
-
-.grow-anim path,
-.grow-anim circle {
-  stroke: #91ee77;
-  stroke-width: 2.2;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: growDraw 1.4s ease forwards;
-}
-
-.grow-anim .p path + path {
-  fill: rgba(145, 238, 119, 0.1);
-}
-
-.grow-anim .ground {
-  animation-duration: 0.9s;
-}
-.grow-anim .p1 path { animation-delay: 0.3s; }
-.grow-anim .p3 path { animation-delay: 0.55s; }
-.grow-anim .p2 path { animation-delay: 0.8s; }
-.grow-anim .sun {
-  stroke-width: 1.6;
-  opacity: 0.55;
-  animation-delay: 1.3s;
-}
-
-@keyframes growDraw {
-  to { stroke-dashoffset: 0; }
-}
-
-.grow-anim .p {
-  transform-box: fill-box;
-  transform-origin: bottom center;
-}
-.grow-anim .p1 { animation: sway 6s ease-in-out 1.9s infinite; }
-.grow-anim .p2 { animation: sway 7.6s ease-in-out 2.3s infinite; }
-.grow-anim .p3 { animation: sway 5.4s ease-in-out 2.1s infinite reverse; }
-
-@keyframes sway {
-  0%, 100% { transform: rotate(-1.6deg); }
-  50% { transform: rotate(1.6deg); }
 }
 
 /* --------------------------------------------------
@@ -210,9 +141,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .grow-anim path,
-  .grow-anim circle { animation: none; stroke-dashoffset: 0; }
-  .grow-anim .p { animation: none; }
   .hero__leaves { display: none; }
 }
 
