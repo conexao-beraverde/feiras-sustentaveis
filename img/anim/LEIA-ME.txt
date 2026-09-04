@@ -1,0 +1,19 @@
+ANIMAÇÃO DA SEÇÃO "MAPA DAS FEIRAS"
+===================================
+
+Salve aqui um arquivo com o nome EXATO:
+
+  plantas.json
+
+Formato: Lottie JSON (não .lottie, não .gif, não vídeo).
+
+Onde baixar (grátis):
+- lottiefiles.com  -> buscar "plants" / "leaves" / "botanical"
+  Na página da animação: botão "Download" -> escolher "Lottie JSON".
+- iconscout.com (aba Lottie), storyset.com
+
+Dicas:
+- Prefira algo simples, que faça loop suave (folhas balançando, planta
+  crescendo). Evite animações muito coloridas/ruidosas — o fundo é verde escuro.
+- Enquanto o arquivo não existir, o espaço fica vazio (sem erro).
+- Para quem tem "reduzir movimento" ligado no sistema, a animação não aparece.

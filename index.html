@@ -133,10 +133,16 @@
 
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4" id="feirasGrid"></div>
 
-      <!-- Vídeo da Feira Sabor do Norte (Instagram) -->
+      <!-- Vídeo da Feira Sabor do Norte (Instagram) + animação decorativa -->
       <p class="eyebrow mt-10 mb-4">Feira Sabor do Norte</p>
-      <div class="ig-embed">
-        <iframe src="https://www.instagram.com/reel/DcvrnRxR-c-/embed" title="Feira Sabor do Norte no Instagram" loading="lazy" frameborder="0" scrolling="no"></iframe>
+      <div class="ig-block">
+        <div class="ig-embed">
+          <iframe src="https://www.instagram.com/reel/DcvrnRxR-c-/embed" title="Feira Sabor do Norte no Instagram" loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <!-- ANIMAÇÃO: baixar uma animação de plantas em formato Lottie (.json) e salvar como img/anim/plantas.json -->
+        <div class="plant-anim" aria-hidden="true">
+          <lottie-player src="./img/anim/plantas.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </div>
       </div>
     </section>
 
@@ -470,5 +476,7 @@
     </div>
 
     <script src="./js/script.js" charset="utf-8"></script>
+    <!-- player da animação Lottie (só age se existir img/anim/plantas.json) -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.12/dist/lottie-player.js" defer></script>
   </body>
 </html>
