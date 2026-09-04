@@ -1,0 +1,6 @@
+# arquivos grandes — os PDFs agora são links externos (Embrapa / SESI)
+*.pdf
+
+# temporários
+Thumbs.db
+.DS_Store

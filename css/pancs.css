@@ -1,0 +1,461 @@
+/* =====================================================
+   PANCs — catálogo, filtros e ficha completa (modal)
+   Complementa css/output.css (Tailwind pré-compilado).
+   Usa a mesma paleta definida em css/input.css.
+   ===================================================== */
+
+:root {
+  --verde-200: #acef75;
+  --verde-300: #91ee77;
+  --verde-400: #17e880;
+  --verde-700: #2e482c;
+  --verde-800: #16281f;
+  --verde-900: #0f1c15;
+  --verde-950: #030504;
+  --alerta-200: #fddca5;
+  --alerta-400: #f5b544;
+  --alerta-borda: #7a5a1e;
+}
+
+/* --- utilitário para leitores de tela --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- foco visível consistente --- */
+.panc-controls :focus-visible,
+#pancsGrid :focus-visible,
+.panc-modal :focus-visible,
+#pancsVazio :focus-visible {
+  outline: 2px solid var(--verde-300);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* =========================== Controles =========================== */
+.panc-controls {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .panc-controls {
+    grid-template-columns: minmax(0, 22rem) 1fr;
+    align-items: center;
+  }
+}
+
+.panc-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.panc-search__icon {
+  position: absolute;
+  left: 0.85rem;
+  font-size: 0.95rem;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.panc-search input {
+  width: 100%;
+  padding: 0.7rem 0.9rem 0.7rem 2.4rem;
+  color: #fff;
+  background: var(--verde-900);
+  border: 1px solid var(--verde-700);
+  border-radius: 9999px;
+  font: inherit;
+}
+
+.panc-search input::placeholder {
+  color: #9ca3af;
+}
+
+.panc-search input:focus {
+  outline: 2px solid var(--verde-300);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.panc-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .panc-filtros {
+    justify-content: flex-end;
+  }
+}
+
+.panc-contagem {
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--verde-300);
+}
+
+/* =========================== Placeholder de imagem =========================== */
+/* Aplicado ao container da imagem. Se o <img> falhar (onerror="this.remove()"),
+   sobra este fundo verde com um emoji — nunca um ícone de imagem quebrada. */
+.thumb-ph {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--verde-700), var(--verde-950));
+}
+
+.thumb-ph::after {
+  content: attr(data-ph);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.75rem;
+  opacity: 0.5;
+}
+
+.thumb-ph > img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================== Card =========================== */
+.panc-card__sci {
+  margin: 0;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--verde-300);
+}
+
+.panc-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.panc-badge {
+  padding: 0.15rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--verde-200);
+  background: var(--verde-950);
+  border: 1px solid var(--verde-700);
+  border-radius: 9999px;
+}
+
+.panc-badges--lg .panc-badge {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.7rem;
+}
+
+/* =========================== Estado vazio =========================== */
+.panc-vazio {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #d1d5db;
+  background: color-mix(in srgb, var(--verde-900) 60%, transparent);
+  border: 2px dashed var(--verde-700);
+  border-radius: 0.75rem;
+}
+
+.panc-vazio[hidden] {
+  display: none;
+}
+
+.panc-vazio span {
+  font-size: 1.8rem;
+}
+
+.panc-vazio button {
+  margin-top: 0.4rem;
+}
+
+/* =========================== Modal / Ficha =========================== */
+.panc-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4vh 1rem;
+}
+
+.panc-modal[hidden] {
+  display: none;
+}
+
+.panc-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 5, 4, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.panc-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 40rem;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: var(--verde-900);
+  border: 1px solid var(--verde-700);
+  border-radius: 1rem;
+  scroll-behavior: smooth;
+}
+
+.panc-modal__dialog:focus {
+  outline: none;
+}
+
+.panc-modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--verde-900);
+  cursor: pointer;
+  background: linear-gradient(to bottom, var(--verde-200), var(--verde-400));
+  border: 1px solid var(--verde-200);
+  border-radius: 9999px;
+}
+
+.panc-ficha__hero {
+  height: 12rem;
+  background: var(--verde-950);
+}
+
+.panc-ficha__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.panc-ficha__credito {
+  margin: 0;
+  padding: 0.5rem 1.5rem 0;
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+.panc-ficha__credito a {
+  color: #9ca3af;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.panc-ficha__head {
+  padding: 1.25rem 1.5rem 0;
+}
+
+.panc-ficha__nome {
+  margin: 0;
+  font-family: "DM Serif Text", Georgia, serif;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.panc-ficha__sci {
+  margin: 0.25rem 0 0;
+  font-style: italic;
+  color: var(--verde-300);
+}
+
+.panc-ficha__outros {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.panc-ficha__flag {
+  margin: 0.75rem 0 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+}
+
+.panc-ficha__flag--alerta {
+  color: var(--alerta-200);
+  background: color-mix(in srgb, var(--alerta-400) 14%, transparent);
+  border: 1px solid var(--alerta-borda);
+}
+
+/* --- seções da ficha --- */
+.panc-sec {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--verde-700) 60%, transparent);
+}
+
+.panc-sec h3 {
+  margin: 0 0 0.6rem;
+  font-family: "DM Serif Text", Georgia, serif;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.panc-sec p {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #d1d5db;
+}
+
+.panc-sec p strong,
+.panc-sec dt {
+  color: #fff;
+}
+
+.panc-sub {
+  margin: 0.8rem 0 0.3rem !important;
+  font-size: 0.72rem !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verde-300) !important;
+}
+
+.panc-list {
+  margin: 0 0 0.4rem;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #d1d5db;
+}
+
+.panc-list--num {
+  list-style: decimal;
+}
+
+.panc-list a {
+  color: var(--verde-300);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.panc-dl {
+  margin: 0 0 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.panc-dl > div {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.5rem;
+}
+
+.panc-dl dt {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.panc-dl dd {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #d1d5db;
+}
+
+@media (max-width: 460px) {
+  .panc-dl > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+
+.panc-callout {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0.6rem 0 0 !important;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.86rem !important;
+  border-radius: 0.6rem;
+}
+
+.panc-callout--info {
+  background: color-mix(in srgb, var(--verde-700) 35%, transparent);
+  border: 1px solid var(--verde-700);
+}
+
+.panc-sec--seg {
+  background: color-mix(in srgb, var(--alerta-400) 8%, transparent);
+}
+
+.panc-sec--seg h3 {
+  color: var(--alerta-200);
+}
+
+.panc-receita {
+  margin-top: 0.8rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--verde-950);
+  border: 1px solid var(--verde-700);
+  border-radius: 0.6rem;
+}
+
+.panc-receita summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--verde-200);
+}
+
+.panc-receita summary:focus-visible {
+  outline: 2px solid var(--verde-300);
+  outline-offset: 3px;
+}
+
+.panc-receita[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+.panc-nota {
+  margin: 0.6rem 0 0 !important;
+  font-size: 0.8rem !important;
+  color: #9ca3af !important;
+}
+
+/* =========================== Movimento reduzido =========================== */
+@media (prefers-reduced-motion: reduce) {
+  .panc-modal__dialog {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    transition: none !important;
+  }
+}

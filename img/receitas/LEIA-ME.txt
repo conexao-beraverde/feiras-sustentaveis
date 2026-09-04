@@ -1,0 +1,14 @@
+FOTOS DAS RECEITAS
+==================
+
+Por enquanto só uma receita usa foto local:
+
+  talo-de-couve.jpg   (Refogado de Talo de Couve)
+
+Enquanto o arquivo não existir, o modal da receita aparece sem a faixa de
+foto no topo (sem erro, só sem imagem).
+
+As outras receitas (bolo de casca de banana, farofa de folha de beterraba)
+ainda usam fotos da internet. Para trocar qualquer uma por foto local,
+edite o campo "img" da receita em js/script.js apontando para
+./img/receitas/nome-do-arquivo.jpg

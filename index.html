@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conexão BeraVerde — PANC, feiras e cozinha zero desperdício em Porto Velho</title>
+    <meta
+      name="description"
+      content="Conexão BeraVerde: catálogo de PANC (Plantas Alimentícias Não Convencionais) com identificação segura, cultivo e uso na cozinha, mapa das feiras e aproveitamento integral. Porto Velho - RO."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/site.css" />
+    <link rel="stylesheet" href="./css/pancs.css" />
+  </head>
+  <body class="bg-verde-800 font-sans">
+    <!-- Header -->
+    <header class="container flex items-center justify-between gap-8 py-8">
+      <a href="#topo" class="brand">
+        <svg class="brand__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 21V11" />
+          <path d="M12 13C12 8.5 8.5 5 3.5 5 3.5 10 7 13.5 12 13.5Z" />
+          <path d="M12 15c0-4 3.2-6.8 8.5-6.8 0 4.8-3.2 7.6-8.5 7.6Z" />
+        </svg>
+        <span class="font-serif text-lg leading-tight text-white">
+          Conexão BeraVerde
+          <span class="text-verde-300 block text-xs font-sans font-medium tracking-widest uppercase">Porto Velho · RO</span>
+        </span>
+      </a>
+
+      <nav
+        id="mobile-menu"
+        class="site-nav z-40 hidden items-center max-lg:fixed max-lg:inset-0 max-lg:w-full lg:flex"
+      >
+        <ul>
+          <li><a class="nav-pill" href="#topo">Início</a></li>
+          <li><a class="nav-pill" href="#feiras">Feiras</a></li>
+          <li><a class="nav-pill" href="#aproveitamento">Cozinha</a></li>
+          <li><a class="nav-pill" href="#panc">PANC</a></li>
+          <li><a class="nav-pill" href="#catalogo">Catálogo</a></li>
+          <li><a class="nav-pill" href="#sobre-nos">Sobre</a></li>
+        </ul>
+      </nav>
+
+      <button id="mobile-button" class="btn text-verde-900 flex items-center gap-3 rounded-full py-1 lg:hidden">
+        Menu
+        <span class="*:bg-verde-800 flex h-3 w-4 flex-col justify-between *:h-0.5 *:rounded-md">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+    </header>
+
+    <!-- Hero -->
+    <main class="container" id="topo">
+      <section class="hero mt-4">
+        <img src="./fundo.jpg" alt="" aria-hidden="true" class="hero__bg" />
+        <div class="hero__overlay"></div>
+        <div class="hero__inner">
+          <p class="text-verde-300 mb-4 text-sm font-medium tracking-widest uppercase">Porto Velho · RO</p>
+          <h1 class="hero__title font-serif text-balance text-white">
+            Conexão BeraVerde
+          </h1>
+          <p class="hero__leaf" aria-hidden="true">
+            <span></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V12"/><path d="M12 14C12 9.5 8.5 6 3.5 6 3.5 11 7 14.5 12 14.5Z"/><path d="M12 16c0-4 3.2-6.8 8.5-6.8 0 4.8-3.2 7.6-8.5 7.6Z"/></svg>
+            <span></span>
+          </p>
+          <p class="mx-auto mb-8 max-w-lg text-balance text-lg text-gray-200">
+            Inteligência que brota da nossa terra para o seu prato.
+          </p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="#feiras" class="btn">Começar</a>
+            <a href="#panc" class="btn-outline">O que são PANC?</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 1. Mapa das Feiras (Agricultura Sustentável / ODS 2) -->
+    <section id="feiras" class="container py-12 sm:py-16">
+      <p class="eyebrow mb-4">Agricultura sustentável · ODS 2 da ONU</p>
+      <h2 class="mb-4 max-w-screen-md font-serif text-3xl text-balance text-white sm:text-4xl">Mapa das Feiras Sustentáveis</h2>
+      <p class="mb-4 max-w-2xl text-balance text-lg text-gray-200">
+        Você sabia que o que vai para o seu prato tem o poder de transformar o planeta e combater a fome?
+      </p>
+      <p class="mb-8 max-w-2xl text-balance text-gray-300">
+        Grandes órgãos como a <strong class="text-white">FAO</strong> (a parte da ONU que cuida dos alimentos)
+        e a <strong class="text-white">Embrapa</strong> defendem que a agricultura sustentável é uma das maiores
+        armas contra a fome. O segredo não é só produzir toneladas de comida, mas fazer isso respeitando o meio
+        ambiente e garantindo a nossa <strong class="text-white">soberania alimentar</strong> — o direito de o
+        nosso país e as nossas comunidades decidirem como produzir e consumir a própria comida, de forma
+        saudável e independente.
+      </p>
+
+      <p class="eyebrow mb-4">Por que comprar direto das feiras?</p>
+      <ul class="mb-10 grid max-w-screen-md gap-6 sm:grid-cols-3">
+        <li class="flex gap-3">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 0 1 12.4-5.7"/><path d="M19.5 12a7.5 7.5 0 0 1-12.4 5.7"/><path d="M17 3.5V7h-3.5"/><path d="M7 20.5V17h3.5"/></svg>
+          <p class="m-0 text-sm text-gray-300"><strong class="text-white">Combate ao desperdício:</strong> no sistema dos grandes supermercados, 28% dos alimentos são desperdiçados no final da cadeia na América Latina, segundo a FAO. A feira local reduz o trajeto e o tempo de transporte, garantindo alimentos mais frescos.</p>
+        </li>
+        <li class="flex gap-3">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.7 9.6c.3-1 1.2-1.6 2.4-1.6 1.5 0 2.4.8 2.4 1.8 0 2.4-4.9 1.5-4.9 3.9 0 1 1 1.8 2.5 1.8 1.2 0 2.1-.6 2.4-1.6"/></svg>
+          <p class="m-0 text-sm text-gray-300"><strong class="text-white">Preço justo para você e para o campo:</strong> comprando direto do produtor familiar, sem atravessadores, o custo cai para quem consome em Porto Velho e gera renda digna para quem planta — combatendo a fome nas duas pontas.</p>
+        </li>
+        <li class="flex gap-3">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-8 6-15 16-16 0 10-6 16-16 16Z"/><path d="M4 20C8 14 12 11 17 9"/></svg>
+          <p class="m-0 text-sm text-gray-300"><strong class="text-white">Mais saúde e biodiversidade:</strong> alimentos cultivados respeitando o tempo da natureza, preservando os nutrientes essenciais para o seu corpo, sem esgotar o solo e a nossa rica floresta.</p>
+        </li>
+      </ul>
+
+      <h3 class="mb-2 font-serif text-2xl text-white">Navegue pelo nosso mapa</h3>
+      <p class="mb-6 max-w-2xl text-gray-300">
+        Encontre a feira sustentável mais perto de você, apoie os produtores locais e redescubra o prazer de
+        comer bem em Porto Velho. Clique no pin e depois no nome da feira para ver dia, endereço e horários.
+      </p>
+
+      <!-- MAPA: substituir este bloco pelo <iframe> do "Incorporar" do Google My Maps colaborativo -->
+      <div class="map-embed" role="img" aria-label="Espaço reservado para o mapa colaborativo das feiras">
+        <span aria-hidden="true">🗺️</span>
+        <p>O mapa colaborativo do Google My Maps entra aqui.</p>
+        <p class="map-embed__hint">Equipe: no Google My Maps → <strong>Compartilhar → Incorporar no site</strong> → copiar o código &lt;iframe&gt; e me enviar.</p>
+      </div>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4" id="feirasGrid"></div>
+
+      <!-- Vídeo da Feira Sabor do Norte (Instagram) -->
+      <p class="eyebrow mt-10 mb-4">Feira Sabor do Norte</p>
+      <div class="ig-embed">
+        <iframe src="https://www.instagram.com/reel/DcvrnRxR-c-/embed" title="Feira Sabor do Norte no Instagram" loading="lazy" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </section>
+
+    <!-- 2. Cozinha Zero Desperdício -->
+    <section id="aproveitamento" class="bg-verde-900 py-12 sm:py-16">
+      <div class="container">
+        <p class="eyebrow mb-4">Aproveitamento integral dos alimentos</p>
+        <h2 class="mb-4 max-w-screen-md font-serif text-3xl text-balance text-white sm:text-4xl">Cozinha Zero Desperdício</h2>
+        <p class="mb-4 max-w-2xl text-balance text-lg text-gray-200">
+          Você já parou para pensar em quanta comida boa vai parar no lixo da sua casa todas as semanas?
+        </p>
+        <p class="mb-4 max-w-2xl text-balance text-gray-300">
+          A Cozinha Zero Desperdício é um movimento e uma prática: usar os alimentos de forma
+          <strong class="text-white">100% integral</strong>. Aquela casca, talo, folha ou semente que a maioria
+          joga fora no automático aqui vira ingrediente principal — com valor nutricional gigante e muito sabor,
+          transformada em farinhas caseiras, doces, refogados, chips e caldos.
+        </p>
+        <p class="mb-8 max-w-2xl text-balance text-gray-300">
+          O conceito nasceu para enfrentar um problema absurdo do nosso sistema alimentar: enquanto milhões de
+          pessoas passam fome, toneladas de comida em perfeitas condições são descartadas todos os dias.
+        </p>
+
+        <ul class="mb-10 grid max-w-screen-md gap-4 sm:grid-cols-2">
+          <li class="flex gap-3">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-8 6-15 16-16 0 10-6 16-16 16Z"/><path d="M4 20C8 14 12 11 17 9"/></svg>
+            <p class="m-0 text-sm text-gray-300"><strong class="text-white">Aproveitamento integral:</strong> uso total do alimento para maximizar nutrientes e eliminar o lixo orgânico.</p>
+          </li>
+          <li class="flex gap-3">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.7 9.6c.3-1 1.2-1.6 2.4-1.6 1.5 0 2.4.8 2.4 1.8 0 2.4-4.9 1.5-4.9 3.9 0 1 1 1.8 2.5 1.8 1.2 0 2.1-.6 2.4-1.6"/></svg>
+            <p class="m-0 text-sm text-gray-300"><strong class="text-white">Economia doméstica:</strong> redução inteligente nos gastos com alimentação no dia a dia da família.</p>
+          </li>
+          <li class="flex gap-3">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 0 1 12.4-5.7"/><path d="M19.5 12a7.5 7.5 0 0 1-12.4 5.7"/><path d="M17 3.5V7h-3.5"/><path d="M7 20.5V17h3.5"/></svg>
+            <p class="m-0 text-sm text-gray-300"><strong class="text-white">Combate ao desperdício:</strong> consciência contra o descarte desnecessário nas cidades.</p>
+          </li>
+          <li class="flex gap-3">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.7 4 6 4 9s-1.5 6.3-4 9c-2.5-2.7-4-6-4-9s1.5-6.3 4-9Z"/></svg>
+            <p class="m-0 text-sm text-gray-300"><strong class="text-white">Proteção ao planeta:</strong> comer o alimento por inteiro significa otimizar a água, a terra e a energia que foram gastas para produzi-lo.</p>
+          </li>
+        </ul>
+
+        <p class="mb-4 max-w-2xl text-gray-300">
+          Quer colocar a mão na massa? Acesse o e-book abaixo e descubra como transformar o que iria para o lixo
+          em pratos incríveis.
+        </p>
+
+        <div class="mb-12">
+          <a class="bg-verde-800 border-verde-700 hover:border-verde-400 flex max-w-lg items-start gap-4 rounded-xl border p-5 transition" href="https://alimentesebem.sesisp.org.br/arquivos/publicacao/sesi-chef-2019" target="_blank" rel="noopener">
+            <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4.5h10a2 2 0 0 1 2 2V20H7a2 2 0 0 1-2-2Z"/><path d="M5 16.5h12"/><path d="M9 4.5V16"/></svg>
+            <span class="grid gap-1">
+              <span class="font-serif text-lg text-white">SESI Chef 2019 — Receitas</span>
+              <span class="text-sm text-gray-400">E-book do programa Alimente-se Bem (SESI-SP): 56 receitas de aproveitamento integral com casca, talo, folha e semente.</span>
+              <span class="text-verde-300 mt-1 text-xs font-semibold tracking-widest uppercase">Abrir no site do SESI ↗</span>
+            </span>
+          </a>
+        </div>
+
+        <h3 class="mb-4 font-serif text-2xl text-white">Receitas para começar</h3>
+        <div class="grid gap-4 sm:grid-cols-3 sm:gap-8" id="receitasGrid"></div>
+      </div>
+    </section>
+
+    <!-- 3. PANC (outro pilar) -->
+    <section id="panc" class="container py-12 sm:py-16">
+      <p class="eyebrow mb-4">Outro pilar essencial</p>
+      <h2 class="mb-4 font-serif text-4xl text-balance text-white">PANC</h2>
+      <p class="mb-4 max-w-2xl text-balance text-lg text-gray-200">
+        O que você faria se soubesse que aquele "mato" ou "erva daninha" que cresce na calçada ou no quintal
+        pode ser um superalimento?
+      </p>
+      <p class="mb-8 max-w-2xl text-balance text-gray-300">
+        A sigla <strong class="text-white">PANC</strong> significa <strong class="text-white">Plantas
+        Alimentícias Não Convencionais</strong>: vegetais, folhas, frutos ou raízes comestíveis de alto valor
+        nutritivo que você não encontra facilmente no supermercado. O que é "não convencional" muda com a cultura
+        — uma planta ignorada na sua rua pode ser o ingrediente principal e valorizado na mesa de outra comunidade.
+      </p>
+
+      <p class="eyebrow mb-4">Os 4 superpoderes das PANC</p>
+      <ul class="mb-10 grid max-w-screen-md gap-4 sm:grid-cols-2">
+        <li class="flex gap-3">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-8 6-15 16-16 0 10-6 16-16 16Z"/><path d="M4 20C8 14 12 11 17 9"/></svg>
+          <p class="m-0 text-sm text-gray-300"><strong class="text-white">Nutrição sem gastar nada:</strong> riquíssimas em vitaminas e minerais. Como nascem sozinhas, garantem comida saudável de graça.</p>
+        </li>
+        <li class="flex gap-3">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <p class="m-0 text-sm text-gray-300"><strong class="text-white">Resistência e combate à fome:</strong> crescem fácil em qualquer canto e aguentam bem o clima, garantindo que ninguém fique sem comer.</p>
+        </li>
+        <li class="flex gap-3">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M15 6.2a3 3 0 0 1 0 5.6"/><path d="M3.5 20c0-3 2.5-5.5 5.5-5.5S14.5 17 14.5 20"/><path d="M16 14.6c2.6.5 4.5 2.7 4.5 5.4"/></svg>
+          <p class="m-0 text-sm text-gray-300"><strong class="text-white">Cultura e história viva:</strong> guardam os saberes de indígenas, ribeirinhos e quilombolas sobre a época certa de colher e cozinhar.</p>
+        </li>
+        <li class="flex gap-3">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-6"/><path d="M8.5 16h7"/><path d="M12 3c-3 0-5 2.2-5 5 0 1.9 1 3.4 2.4 4.3C8 13.4 7 14.9 7 16.8h10c0-1.9-1-3.4-2.4-4.5C16 11.4 17 9.9 17 8c0-2.8-2-5-5-5Z"/></svg>
+          <p class="m-0 text-sm text-gray-300"><strong class="text-white">Proteção da Amazônia:</strong> valorizar as PANC protege a biodiversidade da floresta e mostra o potencial alimentício da natureza ao redor.</p>
+        </li>
+      </ul>
+
+      <h3 class="mb-3 font-serif text-2xl text-white">PANC de Porto Velho: você conhece alguma?</h3>
+      <p class="mb-4 max-w-2xl text-gray-300">Na região Norte, elas fazem parte da nossa identidade e estão nos pratos mais tradicionais:</p>
+      <ul class="mb-10 grid max-w-2xl gap-2 text-sm text-gray-300">
+        <li><strong class="text-white">Jambu:</strong> a folha que dá dormência na boca, essencial no tacacá.</li>
+        <li><strong class="text-white">Chicória-do-pará:</strong> tempero marcante para caldos e peixes.</li>
+        <li><strong class="text-white">Cariru e taioba:</strong> folhas deliciosas para comer refogadas no almoço.</li>
+      </ul>
+
+      <a class="bg-verde-900 border-verde-700 hover:border-verde-400 flex max-w-lg items-start gap-4 rounded-xl border p-5 transition" href="https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1132694/1/Panc-para-nossa-Sau769de.pdf" target="_blank" rel="noopener">
+        <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4.5h10a2 2 0 0 1 2 2V20H7a2 2 0 0 1-2-2Z"/><path d="M5 16.5h12"/><path d="M9 4.5V16"/></svg>
+        <span class="grid gap-1">
+          <span class="font-serif text-lg text-white">Plantas Alimentícias Não Convencionais &amp; Saúde</span>
+          <span class="text-sm text-gray-400">Esqueça o mito do "mato": guia completo da Embrapa para trazer as PANC para a sua mesa com total segurança.</span>
+          <span class="text-verde-300 mt-1 text-xs font-semibold tracking-widest uppercase">Abrir PDF (CAR-BA / Embrapa) ↗</span>
+        </span>
+      </a>
+    </section>
+
+    <!-- 4. Catálogo de PANC -->
+    <section id="catalogo" class="container mb-12 py-12 sm:mb-16 sm:py-16">
+      <p class="eyebrow mb-4">Catálogo científico</p>
+      <h2 class="mb-4 max-w-screen-md font-serif text-3xl text-balance text-white sm:text-4xl">Catálogo de PANC</h2>
+      <p class="mb-4 max-w-2xl text-balance text-lg text-gray-200">
+        Não sabe se aquela planta no quintal é comestível ou mato?
+      </p>
+      <p class="mb-4 max-w-2xl text-balance text-gray-300">
+        O nosso catálogo foi criado para valorizar a biodiversidade da região e te dar autonomia: um banco de
+        dados para fazer a identificação botânica correta de cada espécie nativa, com segurança.
+      </p>
+      <p class="mb-8 max-w-2xl text-balance text-gray-300">
+        Abra a ficha de cada planta para ver o nome científico, características visuais (para nunca confundir com
+        espécies perigosas), dicas de cultivo, uso na cozinha e cuidados especiais.
+      </p>
+
+      <div class="mb-10 grid max-w-screen-md gap-4 sm:grid-cols-2 sm:gap-6">
+        <article class="card grid gap-2 p-6">
+          <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.7-4.7"/><path d="M10.5 7.5c-1.6 1.2-1.6 4.8 0 6 1.6-1.2 1.6-4.8 0-6Z"/></svg>
+          <h3 class="font-serif text-lg text-white">Identificação botânica</h3>
+          <p class="m-0 text-sm text-gray-400">
+            Reconheça as espécies no campo e na cozinha: nome científico, características e com o que cada
+            planta pode ser confundida.
+          </p>
+        </article>
+        <article class="card grid gap-2 p-6">
+          <svg class="ico ico--lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+          <h3 class="font-serif text-lg text-white">Banco de dados</h3>
+          <p class="m-0 text-sm text-gray-400">
+            Um catálogo focado na valorização da biodiversidade e das espécies nativas da Região Amazônica.
+          </p>
+        </article>
+      </div>
+
+      <div class="panc-controls" role="search">
+        <label class="panc-search">
+          <span class="panc-search__icon" aria-hidden="true">🔎</span>
+          <span class="sr-only">Buscar planta por nome popular ou científico</span>
+          <input type="search" id="pancBusca" placeholder="Buscar: jambu, taioba, Pereskia…" autocomplete="off" />
+        </label>
+        <div class="panc-filtros" id="pancFiltros" role="group" aria-label="Filtrar por parte comestível">
+          <button type="button" class="chip is-active" data-parte="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" data-parte="folha" aria-pressed="false">Folha</button>
+          <button type="button" class="chip" data-parte="flor" aria-pressed="false">Flor</button>
+          <button type="button" class="chip" data-parte="fruto" aria-pressed="false">Fruto</button>
+        </div>
+      </div>
+
+      <p class="panc-contagem" id="pancContagem" aria-live="polite"></p>
+
+      <div class="grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4" id="pancsGrid"></div>
+
+      <div class="panc-vazio" id="pancsVazio" hidden>
+        <span aria-hidden="true">🌱</span>
+        <p>Nenhuma planta encontrada com essa busca ou filtro.</p>
+        <button type="button" class="btn-outline" id="pancLimpar">Limpar busca e filtros</button>
+      </div>
+
+      <div id="seguranca" class="border-verde-700 bg-verde-900 mt-10 flex items-start gap-4 rounded-xl border-l-4 border-solid p-5">
+        <span class="text-xl" aria-hidden="true">⚠️</span>
+        <p class="m-0 text-gray-200">
+          <strong class="text-white">Segurança em primeiro lugar:</strong>
+          identifique a planta com certeza antes de consumir, prefira exemplares longe de trânsito e agrotóxico,
+          e respeite as recomendações de cozimento de cada ficha. Na dúvida, não coma.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. Links que inspiram -->
+    <section id="links" class="container py-12 sm:py-16">
+      <p class="eyebrow mb-4">Para se aprofundar</p>
+      <h2 class="mb-4 font-serif text-3xl text-balance text-white sm:text-4xl">Links que inspiram</h2>
+      <p class="mb-8 max-w-2xl text-balance text-gray-300">
+        Iniciativas e fontes confiáveis sobre PANC, agroecologia e alimentação consciente.
+      </p>
+      <div class="grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3" id="linksGrid"></div>
+    </section>
+
+    <!-- Sobre nós -->
+    <section id="sobre-nos" class="py-12 sm:py-16">
+      <div class="container max-w-screen-md">
+        <p class="eyebrow mb-4">Quem faz</p>
+        <h2 class="mb-6 font-serif text-3xl text-balance text-white sm:text-4xl">Sobre nós</h2>
+
+        <div class="grid gap-4 text-gray-300">
+          <p class="m-0 text-balance">
+            Muito além de um projeto de sala de aula, o <strong class="text-white">Conexão BeraVerde</strong>
+            nasce do desejo de transformar conhecimento em impacto real.
+          </p>
+          <p class="m-0 text-balance">
+            Durante a <strong class="text-white">Semana de Educação para a Vida 2026</strong>, nós, estudantes do
+            <strong class="text-white">1º ano A do Curso Técnico em Informática do Instituto Federal de Rondônia
+            (IFRO) — Campus Porto Velho Calama</strong>, fomos desafiados a refletir e promover a conscientização
+            sobre um dos temas mais urgentes da nossa sociedade: <strong class="text-white">Fome e Agricultura
+            Sustentável</strong>.
+          </p>
+          <p class="m-0 text-balance">
+            Nossa jornada começou com um vídeo de 5 minutos inspirado no programa <em>Shark Tank</em>, defendendo
+            o Conexão BeraVerde como uma solução viável e inovadora. Mas 5 minutos eram pouco para a imensidão
+            desse desafio — e decidimos ir além da teoria.
+          </p>
+          <p class="m-0 text-balance">
+            Unindo a base tecnológica que construímos no IFRO à nossa responsabilidade social, o Conexão
+            BeraVerde nasceu como a ponte entre a informação e a ação, dando à nossa comunidade acesso a:
+          </p>
+        </div>
+
+        <ul class="mt-6 grid gap-3">
+          <li class="flex gap-3">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.7 7-12a7 7 0 0 0-14 0c0 6.3 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <p class="m-0 text-sm text-gray-300"><strong class="text-white">Mapa das Feiras Sustentáveis:</strong> informações práticas e a localização de feirinhas que vendem direto do produtor na capital.</p>
+          </li>
+          <li class="flex gap-3">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20c0-8 6-15 16-16 0 10-6 16-16 16Z"/><path d="M4 20C8 14 12 11 17 9"/></svg>
+            <p class="m-0 text-sm text-gray-300"><strong class="text-white">Cozinha Zero Desperdício:</strong> guias e receitas sobre o aproveitamento integral dos alimentos.</p>
+          </li>
+          <li class="flex gap-3">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-6"/><path d="M8.5 16h7"/><path d="M12 3c-3 0-5 2.2-5 5 0 1.9 1 3.4 2.4 4.3C8 13.4 7 14.9 7 16.8h10c0-1.9-1-3.4-2.4-4.5C16 11.4 17 9.9 17 8c0-2.8-2-5-5-5Z"/></svg>
+            <p class="m-0 text-sm text-gray-300"><strong class="text-white">PANC:</strong> uma introdução às Plantas Alimentícias Não Convencionais e como inseri-las no dia a dia com segurança, com um catálogo para identificá-las.</p>
+          </li>
+        </ul>
+
+        <p class="mt-6 text-balance text-gray-300">
+          Este é o nosso ponto de partida. Esperamos que este espaço seja útil, informativo e uma ferramenta
+          real de transformação na mesa dos porto-velhenses. <strong class="text-white">Sejam bem-vindos ao
+          Conexão BeraVerde!</strong>
+        </p>
+
+        <p class="mt-6 text-sm text-gray-400">
+          <span class="text-verde-300 font-semibold">Turma:</span> 1º Ano A de Informática<br />
+          <span class="text-verde-300 font-semibold">Professora Conselheira:</span> Rubenice Sales Taborda
+        </p>
+
+        <!-- ESPAÇO RESERVADO: PDF "Nossa pesquisa e as equipes" + vídeo + audiodescrição -->
+        <div class="map-embed mt-6">
+          <span aria-hidden="true">📄🎬</span>
+          <p>Aqui vão entrar: o PDF <strong>“Nossa pesquisa — e conheça as equipes”</strong>, o vídeo do projeto e o áudio com audiodescrição.</p>
+          <p class="map-embed__hint">Equipe: me enviem o PDF (para a pasta do projeto), o link/arquivo do vídeo e o arquivo de áudio da audiodescrição.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container pb-8">
+      <div class="bg-verde-900 mb-8 grid gap-8 rounded-2xl p-6 sm:p-12 lg:grid-cols-2">
+        <div class="flex gap-12 max-sm:flex-col max-sm:gap-4">
+          <div>
+            <h3 class="mb-4 font-serif text-xl text-white">Contato</h3>
+            <p class="text-gray-400">
+              contato@feirassustentaveispvh.org<br />
+              Porto Velho — RO
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-4 font-serif text-xl text-white">Links rápidos</h3>
+            <p class="grid gap-1 text-gray-400">
+              <a class="hover:text-verde-300 w-fit" href="#feiras">Mapa das Feiras</a>
+              <a class="hover:text-verde-300 w-fit" href="#aproveitamento">Cozinha Zero Desperdício</a>
+              <a class="hover:text-verde-300 w-fit" href="#panc">PANC</a>
+              <a class="hover:text-verde-300 w-fit" href="#catalogo">Catálogo de plantas</a>
+              <a class="hover:text-verde-300 w-fit" href="#sobre-nos">Sobre nós</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:justify-self-end">
+          <div class="mb-4 flex items-center gap-4">
+            <img src="./logo.jpg" alt="Emblema Conexão BeraVerde — Conecta, Produz, Conserva" class="footer-emblem" />
+            <img src="./img/ifro-calama.png" alt="Instituto Federal de Rondônia — Campus Porto Velho Calama" class="footer-emblem footer-emblem--ifro" onerror="this.style.display='none'" />
+          </div>
+          <span class="font-serif text-xl text-white">Conexão BeraVerde</span>
+          <p class="text-gray-400">Inteligência que brota da nossa terra para o seu prato.</p>
+          <p class="mt-3 text-sm text-gray-500">Projeto dos alunos do 1º&nbsp;A de Informática — IFRO Campus Porto Velho Calama.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between gap-8 text-sm text-gray-400 max-sm:flex-col-reverse">
+        <p>&copy; <span id="anoAtual"></span> Conexão BeraVerde — Porto Velho · RO. Conteúdo educativo.</p>
+
+        <ul class="flex gap-8">
+          <li><a href="#" class="hover:text-verde-300">Instagram</a></li>
+          <li><a href="#" class="hover:text-verde-300">Facebook</a></li>
+          <li><a href="#" class="hover:text-verde-300">WhatsApp</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Modal: ficha da PANC -->
+    <div id="modalPanc" class="panc-modal" hidden>
+      <div class="panc-modal__overlay" data-close-panc></div>
+      <div class="panc-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="pancModalTitulo" tabindex="-1">
+        <button type="button" class="panc-modal__close" data-close-panc aria-label="Fechar ficha">&times;</button>
+        <div id="pancModalBody"></div>
+      </div>
+    </div>
+
+    <!-- Modal: receita -->
+    <div id="modalReceita" class="fixed inset-0 z-50 hidden">
+      <div class="bg-verde-950/70 absolute inset-0 backdrop-blur-sm" data-close-modal></div>
+      <div class="bg-verde-900 border-verde-700 relative z-10 mx-auto my-[6vh] max-h-[88vh] max-w-lg overflow-y-auto rounded-2xl border">
+        <button class="btn text-verde-900 absolute top-4 right-4 flex size-9 items-center justify-center rounded-full text-xl" data-close-modal aria-label="Fechar">&times;</button>
+        <img id="modalReceitaImg" src="" alt="" class="h-48 w-full object-cover" />
+        <div class="p-6 sm:p-8">
+          <h3 id="modalReceitaTitulo" class="mb-1 font-serif text-2xl text-white"></h3>
+          <p id="modalReceitaCredito" class="mb-4 text-xs text-gray-500"></p>
+          <div class="mb-4">
+            <h4 class="text-verde-300 mb-2 text-xs font-semibold tracking-widest uppercase">Ingredientes</h4>
+            <ul id="modalReceitaIngredientes" class="grid list-inside list-disc gap-1 text-gray-300"></ul>
+          </div>
+          <div>
+            <h4 class="text-verde-300 mb-2 text-xs font-semibold tracking-widest uppercase">Modo de preparo</h4>
+            <ol id="modalReceitaPreparo" class="grid list-inside list-decimal gap-1 text-gray-300"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js" charset="utf-8"></script>
+  </body>
+</html>
