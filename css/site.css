@@ -126,11 +126,13 @@
 
 .plant-anim {
   width: 100%;
-  max-width: 460px;
+  max-width: 400px;
 }
 
-.plant-anim lottie-player {
-  width: 100%;
+.plant-anim svg {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
 }
 
 /* respeita quem prefere menos movimento */

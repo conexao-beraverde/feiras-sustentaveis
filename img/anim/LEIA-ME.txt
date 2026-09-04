@@ -1,19 +1,20 @@
 ANIMAÇÃO DA SEÇÃO "MAPA DAS FEIRAS"
 ===================================
 
-Salve aqui um arquivo com o nome EXATO:
+Arquivos:
+- plantas.json  -> a animação (Lottie JSON) — é o que você troca
+- plantas.js    -> "embrulho" do .json que o site carrega
+                   (necessário porque abrir o site como arquivo local
+                    bloqueia a leitura direta do .json)
 
-  plantas.json
-
-Formato: Lottie JSON (não .lottie, não .gif, não vídeo).
-
-Onde baixar (grátis):
-- lottiefiles.com  -> buscar "plants" / "leaves" / "botanical"
-  Na página da animação: botão "Download" -> escolher "Lottie JSON".
-- iconscout.com (aba Lottie), storyset.com
+PARA TROCAR A ANIMAÇÃO:
+1. Baixe outra em formato Lottie JSON (lottiefiles.com / iconscout.com ->
+   Download -> "Lottie JSON").
+2. Substitua o plantas.json por ela (mesmo nome).
+3. Me avise que eu regenero o plantas.js. (Ou, quem souber:
+   node -e "const fs=require('fs');fs.writeFileSync('plantas.js','window.__plantAnim='+fs.readFileSync('plantas.json')+';')")
 
 Dicas:
-- Prefira algo simples, que faça loop suave (folhas balançando, planta
-  crescendo). Evite animações muito coloridas/ruidosas — o fundo é verde escuro.
-- Enquanto o arquivo não existir, o espaço fica vazio (sem erro).
-- Para quem tem "reduzir movimento" ligado no sistema, a animação não aparece.
+- Prefira algo simples, verde, com loop suave (planta crescendo, folhas
+  balançando). O fundo do site é verde escuro — evite cores muito claras/ruidosas.
+- Quem tem "reduzir movimento" ligado no sistema não vê a animação.
