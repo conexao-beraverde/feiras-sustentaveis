@@ -133,14 +133,10 @@
 
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4" id="feirasGrid"></div>
 
-      <!-- Vídeo da Feira Sabor do Norte (Instagram) + animação decorativa -->
+      <!-- Vídeo da Feira Sabor do Norte (Instagram) -->
       <p class="eyebrow mt-10 mb-4">Feira Sabor do Norte</p>
-      <div class="ig-block">
-        <div class="ig-embed">
-          <iframe src="https://www.instagram.com/reel/DcvrnRxR-c-/embed" title="Feira Sabor do Norte no Instagram" loading="lazy" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <!-- ANIMAÇÃO: img/anim/plantas.json (Lottie). Inicializada no fim do body. -->
-        <div class="plant-anim" aria-hidden="true"></div>
+      <div class="ig-embed">
+        <iframe src="https://www.instagram.com/reel/DcvrnRxR-c-/embed" title="Feira Sabor do Norte no Instagram" loading="lazy" frameborder="0" scrolling="no"></iframe>
       </div>
     </section>
 
@@ -474,26 +470,5 @@
     </div>
 
     <script src="./js/script.js" charset="utf-8"></script>
-
-    <!-- Animação de plantas (Lottie). Dados em plantas.js (embrulho de plantas.json,
-         pra funcionar também abrindo o arquivo local). Respeita "reduzir movimento". -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
-    <script src="./img/anim/plantas.js" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var el = document.querySelector(".plant-anim");
-        var reduz = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (!el || !window.lottie || !window.__plantAnim || reduz) return;
-        try {
-          window.lottie.loadAnimation({
-            container: el,
-            renderer: "svg",
-            loop: true,
-            autoplay: true,
-            animationData: window.__plantAnim
-          });
-        } catch (e) { /* sem animação, sem problema */ }
-      });
-    </script>
   </body>
 </html>

@@ -94,23 +94,8 @@
   border: 0;
 }
 
-/* Vídeo do Instagram + animação lado a lado */
-.ig-block {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-  justify-items: center;
-}
-
-@media (min-width: 820px) {
-  .ig-block {
-    grid-template-columns: 380px 1fr;
-    justify-items: start;
-  }
-}
-
+/* Embed do Instagram (vídeo da feira) */
 .ig-embed {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -122,24 +107,6 @@
   border: 1px solid var(--verde-700);
   border-radius: 0.9rem;
   background: #000;
-}
-
-.plant-anim {
-  width: 100%;
-  max-width: 400px;
-}
-
-.plant-anim svg {
-  display: block;
-  width: 100% !important;
-  height: auto !important;
-}
-
-/* respeita quem prefere menos movimento */
-@media (prefers-reduced-motion: reduce) {
-  .plant-anim {
-    display: none;
-  }
 }
 
 /* Rótulo de seção (eyebrow) — âncora à esquerda com traço verde */
