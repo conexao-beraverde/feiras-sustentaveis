@@ -73,6 +73,23 @@
   color: #9ca3af;
 }
 
+/* mapa real embutido: sem borda tracejada, iframe preenchendo */
+.map-embed--live {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--verde-700);
+  border-style: solid;
+  background: var(--verde-900);
+}
+
+.map-embed--live iframe {
+  display: block;
+  width: 100%;
+  height: 28rem;
+  border: 0;
+}
+
 /* Embed do Instagram (vídeo da feira) */
 .ig-embed {
   display: flex;
