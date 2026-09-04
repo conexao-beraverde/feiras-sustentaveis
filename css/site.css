@@ -94,8 +94,23 @@
   border: 0;
 }
 
-/* Embed do Instagram (vídeo da feira) */
+/* Vídeo do Instagram + animação de mudas lado a lado */
+.ig-block {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+@media (min-width: 860px) {
+  .ig-block {
+    grid-template-columns: 380px 1fr;
+    justify-items: start;
+  }
+}
+
 .ig-embed {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -107,6 +122,98 @@
   border: 1px solid var(--verde-700);
   border-radius: 0.9rem;
   background: #000;
+}
+
+/* --------------------------------------------------
+   Mudas crescendo (SVG feito à mão, no traço do site)
+   -------------------------------------------------- */
+.grow-anim {
+  width: 100%;
+  max-width: 400px;
+  overflow: visible;
+}
+
+.grow-anim path,
+.grow-anim circle {
+  stroke: #91ee77;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: growDraw 1.4s ease forwards;
+}
+
+.grow-anim .p path + path {
+  fill: rgba(145, 238, 119, 0.1);
+}
+
+.grow-anim .ground {
+  animation-duration: 0.9s;
+}
+.grow-anim .p1 path { animation-delay: 0.3s; }
+.grow-anim .p3 path { animation-delay: 0.55s; }
+.grow-anim .p2 path { animation-delay: 0.8s; }
+.grow-anim .sun {
+  stroke-width: 1.6;
+  opacity: 0.55;
+  animation-delay: 1.3s;
+}
+
+@keyframes growDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+.grow-anim .p {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+.grow-anim .p1 { animation: sway 6s ease-in-out 1.9s infinite; }
+.grow-anim .p2 { animation: sway 7.6s ease-in-out 2.3s infinite; }
+.grow-anim .p3 { animation: sway 5.4s ease-in-out 2.1s infinite reverse; }
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-1.6deg); }
+  50% { transform: rotate(1.6deg); }
+}
+
+/* --------------------------------------------------
+   Folhas caindo (hero) — bem sutil
+   -------------------------------------------------- */
+.hero__leaves {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__leaves span {
+  position: absolute;
+  top: -6%;
+  width: 13px;
+  height: 13px;
+  color: #91ee77;
+  opacity: 0;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M4 20C4 10 11 3 20 3c0 10-7 17-16 17Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M4 20C4 10 11 3 20 3c0 10-7 17-16 17Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  animation: leafFall linear infinite;
+}
+
+@keyframes leafFall {
+  0% { transform: translate3d(0, -30px, 0) rotate(0deg); opacity: 0; }
+  12% { opacity: 0.5; }
+  88% { opacity: 0.5; }
+  100% { transform: translate3d(var(--drift, 26px), 46rem, 0) rotate(300deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grow-anim path,
+  .grow-anim circle { animation: none; stroke-dashoffset: 0; }
+  .grow-anim .p { animation: none; }
+  .hero__leaves { display: none; }
 }
 
 /* Rótulo de seção (eyebrow) — âncora à esquerda com traço verde */
@@ -241,6 +348,7 @@
 
 .hero__inner {
   position: relative;
+  z-index: 2;
   max-width: 44rem;
   margin-inline: auto;
   padding: 4.5rem 1.5rem;

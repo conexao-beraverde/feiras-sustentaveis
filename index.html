@@ -63,6 +63,16 @@
       <section class="hero mt-4">
         <img src="./fundo.jpg" alt="" aria-hidden="true" class="hero__bg" />
         <div class="hero__overlay"></div>
+        <div class="hero__leaves" aria-hidden="true">
+          <span style="left:8%;width:11px;animation-duration:13s;animation-delay:-2s;--drift:34px"></span>
+          <span style="left:19%;width:15px;animation-duration:17s;animation-delay:-9s;--drift:-28px"></span>
+          <span style="left:33%;width:10px;animation-duration:15s;animation-delay:-5s;--drift:20px"></span>
+          <span style="left:47%;width:13px;animation-duration:19s;animation-delay:-13s;--drift:-40px"></span>
+          <span style="left:61%;width:12px;animation-duration:14s;animation-delay:-7s;--drift:30px"></span>
+          <span style="left:74%;width:16px;animation-duration:18s;animation-delay:-3s;--drift:-22px"></span>
+          <span style="left:86%;width:10px;animation-duration:16s;animation-delay:-11s;--drift:26px"></span>
+          <span style="left:93%;width:13px;animation-duration:20s;animation-delay:-6s;--drift:-34px"></span>
+        </div>
         <div class="hero__inner">
           <p class="text-verde-300 mb-4 text-sm font-medium tracking-widest uppercase">Porto Velho · RO</p>
           <h1 class="hero__title font-serif text-balance text-white">
@@ -133,10 +143,33 @@
 
       <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4" id="feirasGrid"></div>
 
-      <!-- Vídeo da Feira Sabor do Norte (Instagram) -->
+      <!-- Vídeo da Feira Sabor do Norte (Instagram) + animação de mudas -->
       <p class="eyebrow mt-10 mb-4">Feira Sabor do Norte</p>
-      <div class="ig-embed">
-        <iframe src="https://www.instagram.com/reel/DcvrnRxR-c-/embed" title="Feira Sabor do Norte no Instagram" loading="lazy" frameborder="0" scrolling="no"></iframe>
+      <div class="ig-block">
+        <div class="ig-embed">
+          <iframe src="https://www.instagram.com/reel/DcvrnRxR-c-/embed" title="Feira Sabor do Norte no Instagram" loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <svg class="grow-anim" viewBox="0 0 260 180" fill="none" role="img" aria-label="Ilustração de mudas crescendo">
+          <path class="ground" pathLength="1" d="M28 156 H232" />
+          <g class="p p1">
+            <path pathLength="1" d="M74 156 C72 134 67 116 70 98" />
+            <path pathLength="1" d="M70 112 C60 106 47 109 42 118 C51 125 65 124 71 116 Z" />
+            <path pathLength="1" d="M70 100 C79 91 92 92 99 99 C90 108 77 108 70 101 Z" />
+          </g>
+          <g class="p p2">
+            <path pathLength="1" d="M130 156 C127 126 132 92 130 62" />
+            <path pathLength="1" d="M130 96 C119 88 104 91 98 102 C108 111 124 108 131 98 Z" />
+            <path pathLength="1" d="M130 80 C140 69 156 70 163 78 C153 88 137 87 130 81 Z" />
+            <path pathLength="1" d="M130 62 C127 51 130 39 138 32 C144 42 142 55 131 63 Z" />
+          </g>
+          <g class="p p3">
+            <path pathLength="1" d="M186 156 C185 140 181 124 184 112" />
+            <path pathLength="1" d="M184 124 C176 118 165 121 160 129 C167 135 179 134 185 128 Z" />
+            <path pathLength="1" d="M184 114 C192 105 205 106 211 113 C203 121 190 120 184 114 Z" />
+          </g>
+          <circle class="sun" pathLength="1" cx="222" cy="42" r="11" />
+        </svg>
       </div>
     </section>
 
