@@ -1,4 +1,4 @@
-# Conexão BeraVerde
+# Conexão Beraverde
 
 Site do projeto de PANC (Plantas Alimentícias Não Convencionais), aproveitamento
 integral dos alimentos e Mapa das Feiras — 1º ano A do curso técnico em

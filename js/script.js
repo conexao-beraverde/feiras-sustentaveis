@@ -891,7 +891,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = [
     { nome: "Embrapa Hortaliças — PANC", desc: "Pesquisa e materiais técnicos sobre PANCs no Brasil.", categoria: "PANCs", url: "https://www.embrapa.br/hortalicas/panc" },
     { nome: "Quintal", desc: "App que conecta vizinhos para trocar, doar e vender frutas, ervas e colheitas do quintal.", categoria: "Redes locais", url: "https://quintalapp.com.br/" },
-    { nome: "MDA — Agricultura Familiar", desc: "Políticas e informações sobre agricultura familiar.", categoria: "Agricultura familiar", url: "https://www.gov.br/mda/pt-br" },
+    { nome: "Rural Sustentável", desc: "Tecnologias que protegem nossa terra.", categoria: "Agricultura Sustentável", url: "https://www.gov.br/agricultura/pt-br/assuntos/sustentabilidade/rural-sustentavel" },
     { nome: "Instituto Kairós", desc: "Sustentabilidade, educação ambiental e novas economias.", categoria: "Educação ambiental", url: "https://institutokairos.net/" },
     { nome: "Comida do Amanhã", desc: "Sistemas alimentares sustentáveis e combate ao desperdício.", categoria: "Aproveitamento de alimentos", url: "https://comidadoamanha.org/" },
     { nome: "Rede Ecovida de Agroecologia", desc: "Agricultores agroecológicos e certificação participativa.", categoria: "Sustentabilidade", url: "https://ecovida.org.br/" }
