@@ -94,6 +94,26 @@
   border: 0;
 }
 
+/* Vídeo do projeto (Google Drive) */
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--verde-700);
+  border-radius: 0.9rem;
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Embed do Instagram (vídeo da feira) */
 .ig-embed {
   display: flex;
